@@ -1,0 +1,124 @@
+:root{
+    --main-dark-blue: #223171;
+    --main-font: 'Alegreya Sans SC', sans-serif;
+}
+
+*, *::before, *::after{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+}
+
+#time-container{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-family: sans-serif;
+    background: var(--main-dark-blue);
+    color: whitesmoke;
+    padding: 1.5vmax;
+    text-align: center;
+    font-size: 12px;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+header > *{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header  img{
+    width: 15vw;
+    margin: 0.5vmax auto 0.5vmax auto;
+}
+
+.logo-container{
+    border-bottom: solid 1px var(--main-dark-blue);
+}
+
+.links{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.links a {
+    display: inline-block;
+    padding: 1vmin;
+    color: var(--main-dark-blue);
+    font-size: 19.5px;
+    text-decoration: none;
+}
+.links a.selected{
+    background: var(--main-dark-blue);
+    color: white;
+}
+
+.links a:hover:not(.selected){
+    background: rgba(235,235,235,1);
+}
+
+section{
+    width: 80%;
+    margin: 1vmax auto;
+    height:60vh;
+    background-image: url("photos/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 60%;
+    position: relative;
+}
+
+section::before{
+    content:'';
+    position:absolute;
+    width: 100%;
+    height:100%;
+    background: rgba(255,255,255,0.3);
+}
+
+.banner{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#banner-text{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    z-index: 20;
+}
+
+#cta {
+    flex-grow: 2;
+    width: 80%;
+    margin: auto;
+    z-index: 20;
+}
+
+#cta a{
+    display: inline-block;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    background-color: var(--main-dark-blue);
+    padding: 1vmax;
+}
+
+#cta a:hover{
+    opacity: .7;
+}
+

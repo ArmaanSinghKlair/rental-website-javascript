@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="rental-style.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap" rel="stylesheet">
+    <title>Rent</title>
+</head>
+<body>
+
+    <main>
+
+
+        <header>
+
+            <div class="logo-container">
+                <img src="photos/logo.png" alt="Logo for the rental">
+            </div>
+
+            <nav>
+                <div class="links">
+                    <a href="index.html" >Home</a>
+                    <a href="rental.html" class="selected">Rent</a>
+                </div>
+            </nav>
+
+        </header>
+
+        <section>
+
+            <div id="search-container">
+                <input type="text" placeholder="Enter Last Name Here" id="search-query"/>
+                <div id="search-results">
+                    <div class="result">Result 1</div>
+                    <div class="result">Result 2</div>
+                    <div class="result">Result 2</div>
+
+                </div>
+            </div>
+
+            <form action="#" id="client-form">
+                <input type="text" placeholder="Lastname Here" id="last-name" disabled />
+                <input type="text" placeholder="Firstname Here" id="first-name" disabled/>
+                <input type="text" placeholder="Address Here" id="address" disabled/>
+                <input type="text" placeholder="State/Province Here" id="state-province" disabled/>
+                <input type="text" placeholder="Email Here" id="email" disabled/>
+                <input type="text" placeholder="Phone Here" id="phone" disabled/>
+
+                <div class="choices">
+                    <label>
+                        Compact $15/day
+                        <input type="radio" value="compact" name="choices" class="work" disabled required/>
+                        <img src="photos/compact.jpg" alt="Compact Car">
+                    </label>
+
+                    <label>
+                        Mid-Size $20/day
+                        <input type="radio" value="mid-size" name="choices"  class="work" disabled required/>
+                        <img src="photos/mid-size.jpg" alt="Mid Size Car">
+                    </label>
+
+                    <label>
+                        Luxury $35/day
+                        <input type="radio" value="luxury" name="choices" class="work"  disabled required/>
+                        <img src="photos/luxury.jpg" alt="Luxury Car">
+                    </label>
+
+                    <label>
+                        Van/Truck $40/day
+                        <input type="radio" value="van/truck" name="choices"  class="work" disabled required/>
+                        <img src="photos/van.jpg" alt="Van/Truck">
+                    </label>
+
+                </div>
+
+                <div class="extras">
+                    <label>
+                        Roof Pack extra $5/day
+                        <input type="checkbox" value="roof" id="roof"  class="work" disabled/>
+                    </label>
+
+                    <label>
+                        Bicycle Rack extra $5/day
+                        <input type="checkbox" value="roof" id="rack"  class="work" disabled/>
+                    </label>
+
+
+                    <label>
+                        GPS extra $10
+                        <input type="checkbox" value="gps" id="gps"  class="work" disabled/>
+                    </label>
+
+                    <label>
+                        Child Seat  FREE
+                        <input type="checkbox" value="child-seat" id="child-seat"  class="work" disabled/>
+                    </label>
+
+                </div>
+
+                <label>
+                Number of Rental Days
+                    <input type="number" min="1" max="30" value="1" id="days" disabled class="work" required />
+                </label>
+                <input type="submit" value="Rent" id="rent-button" disabled class="work" >
+
+            </form>
+        </section>
+    </main>
+    <div id="time-container">Time here</div>
+
+    <div id="overlay">
+        <div id="overlay-content">
+            <div id="box">
+                <div id="info">
+
+                </div>
+
+                <div id="cross-button">
+                    <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="width:1.5vmax;height:1.5vmax" >
+                        <path d="M 0 0 L 100 100 M 100 0 L 0 100" stroke="black" stroke-width="5" ></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="rentalScript.js"></script>
+</body>
+</html>

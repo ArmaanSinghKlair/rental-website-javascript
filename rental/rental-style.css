@@ -1,0 +1,219 @@
+:root{
+    --main-dark-blue: #223171;
+    --main-font: 'Alegreya Sans SC', sans-serif;
+}
+
+*, *::before, *::after{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+}
+
+#time-container{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: sans-serif;
+    background: var(--main-dark-blue);
+    color: whitesmoke;
+    padding: 1.5vmax;
+    text-align: center;
+    font-size: 12px;
+}
+main{
+    margin-bottom: 5vmax;
+}
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+header > *{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header  img{
+    width: 15vw;
+    margin: 0.5vmax auto 0.5vmax auto;
+}
+
+.logo-container{
+    border-bottom: solid 1px var(--main-dark-blue);
+}
+
+.links{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.links a {
+    display: inline-block;
+    padding: 1vmin;
+    color: var(--main-dark-blue);
+    font-size: 19.5px;
+    text-decoration: none;
+}
+.links a.selected{
+    background: var(--main-dark-blue);
+    color: white;
+}
+
+.links a:hover:not(.selected){
+    background: rgba(235,235,235,1);
+}
+
+section{
+    width: 80%;
+    margin: 1vmax auto;
+    box-shadow: 0 0 5px 5px rgb(230,230,230);
+    padding: 1vmax;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+section #search-container{
+    width: 50%;
+    margin: 2vmax auto;
+    position: relative;
+}
+section #search-container input{
+    padding: 0.8vmax 3vmax;
+    border: 1px solid lightgray;
+    outline: none;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 15px;
+    font-family: sans-serif;
+    background-image: url(photos/search.png);
+    background-size: auto 45%;
+    background-position: 2.5% 50%;
+    background-repeat: no-repeat;
+}
+
+#search-results {
+    position: absolute;
+    width:100%;
+    box-shadow: 0 5px 7px 2px gray;
+    z-index: 100;
+    background: white;
+    display: flex;
+    flex-flow: column wrap;
+    top: 100%;
+    display: none;
+}
+
+.result{
+    padding: 1vmin;
+    border-bottom: solid 1px lightgray;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+.result:hover{
+    background: rgba(240,240,255,1);
+}
+
+form{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+form > input{
+    width: 30%;
+    padding: 1vmax 1.5vmax;
+    margin: 1vmax auto;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid gray;
+}
+
+.choices{
+    display: flex;
+
+}
+.choices > * {
+    flex: 1 1 0;
+}
+
+.choices img{
+    width: 90%;
+    margin: auto;
+}
+
+.extras{
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    font-weight: bold;
+    font-size: large;
+}
+
+.extras > *{
+    margin: 1vmin auto;
+}
+
+form > label{
+    text-align: center;
+    font-size: 20px;
+    font-family: sans-serif;
+    border-top: solid 1px lightgray;
+    padding: 1vmax;
+}
+
+form > label > input{
+    padding: .8vmax;
+    width: 40%;
+    font-size: inherit;
+}
+
+input[type="submit"]{
+    background: var(--main-dark-blue);
+    color: white;
+    font-family: sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.5s;
+}
+
+input[type="submit"]:hover{
+    opacity: .8;
+}
+
+
+#overlay{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index:2;
+    display: none;
+}
+
+#overlay-content{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 40%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    background: white;
+    border-radius: 5px;
+    z-index: 3;
+}
+
+#box{
+    position: relative;
+    padding: 1vmax;
+
+}
+#cross-button{
+    position: absolute;
+    right: 1vmax;
+    top: 1vmax;
+    cursor: pointer;
+}
